@@ -1,0 +1,465 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #FF4C4C;
+}
+
+/* Mobile */
+
+.grid-container {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header {
+  grid-area: header;
+  padding-bottom: 30px;
+  display:flex;
+  justify-content: space-between;
+}
+
+header img {
+  width: 25%;
+}
+
+.burger {
+  display: block;
+}
+
+#burger {
+  display: none;
+}
+
+.nav-bar {
+  display: none;
+}
+
+.burger {
+  color: #FF4C4C;
+  font-size: 48px;
+  position: relative;
+  top: 16px;
+  right: 38.62px;
+}
+
+#burger:checked + .nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 66px;
+  right: 18px;
+}
+
+.nav-bar a {
+  font-size: 16px;
+  padding: 2px;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "banner"
+  "main-section";
+}
+
+.banner {
+  grid-area: banner;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-text {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.banner-text h2 {
+  font-weight: 400;
+  width: 73%;
+}
+
+.banner-text p{
+  font-weight: 400;
+  color: #83869A;
+  width: 73%;
+  margin: 25px 0;
+}
+
+.banner-img {
+  border-radius: 39px;
+  width: 90%;
+  margin: 25px 0;
+}
+
+.main-section {
+  grid-area: main-section;
+  display: grid;
+  grid-template: auto / 73%;
+  grid-row-gap: 76px;
+  grid-template-areas:
+  "popular"
+  "essentials"
+  "chef"
+  "nutrition"
+  "plant"
+  "teens";
+  justify-content: center;
+}
+
+.popular-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#FF4C4C, #A94E97);
+  border-radius: 15px;
+  padding: 30px 0;
+}
+
+.popular-card a {
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: solid #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px #83869A;
+}
+
+.popular-card:hover {
+  border: solid 1px #FF4C4C;
+}
+
+.card:hover {
+  border: solid 1px #FF4C4C;
+}
+
+.card h2 {
+  padding: 0px 32px 32px 32px;
+}
+
+.card p {
+  color: #83869A;
+  padding: 0px 32px 32px 32px;
+}
+
+.get-started {
+  display:block;
+  font-weight: bold;
+  padding: 0px 32px 32px 32px;
+}
+
+.card img {
+  width: 61px;
+  position: relative;
+  bottom: 40px;
+  left: 15px;
+}
+
+.popular-card {
+  grid-area: popular;
+}
+
+.essentials {
+  grid-area: essentials;
+}
+
+.chef-skills {
+  grid-area: chef;
+}
+
+.nutrition {
+  grid-area: nutrition;
+}
+
+.plant-based {
+  grid-area: plant;
+}
+
+.teens {
+  grid-area: teens;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+  background-color: #FF4C4C;
+  color: #ffffff; 
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 92px;
+}
+
+/*Media Query Tablet*/
+
+@media (min-width: 725px) {
+
+header img {
+  width: 200px;
+  height: 200px;
+}
+  
+.burger {
+  display: none;
+}
+
+#burger {
+  display: none;
+}
+  
+.nav-bar {
+  height:100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar a {
+  font-size: 20px;
+}
+
+.nav-bar a:nth-child(1) {
+  margin-right: 15px;
+}
+
+#get-started {
+  background-image: linear-gradient(#FF4C4C, #A94E97);
+  padding: 15px 25px;
+  margin: 0 40px 0 20px;
+  border-radius: 28px;
+  color: #ffffff;
+}
+
+.banner-img {
+  width: 800px;
+  height: 475px;
+}
+
+.banner-text h2 {
+  font-size: 70px;
+  font-weight: 300;
+}
+
+.banner-text p {
+  color: #83869A;
+  font-weight: 300;
+  font-size: 28px;
+}
+  
+.main-section {
+  margin-top: 76px;
+  grid-area: main-section;
+  display: grid;
+  grid-template: auto / 350px 350px;
+  grid-row-gap: 85px;
+  grid-column-gap: 75px;
+  grid-template-areas:
+  "essentials chef"
+  "popular nutrition"
+  "plant teens";
+  justify-content: center;
+}
+
+.popular-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#FF4C4C, #A94E97);
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px #83869A;
+  padding: 25px 0;
+}
+
+.popular-card:hover {
+  border: solid 1px #FF4C4C;
+}
+
+.card:hover {
+  border: solid 1px #FF4C4C;
+}
+
+.popular-card a {
+  font-size: 40px;
+  text-align: left;
+  margin: 0 30px;
+}
+  
+}
+
+/* Media Query Desktop*/
+
+@media (min-width: 1100px) {
+
+  .nav-bar {
+    padding-right: 100px;
+  }
+
+.banner {
+  grid-area: banner;
+  margin-bottom: 100px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.banner-text {
+  width: 40%;
+}
+
+.banner-text h2 {
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.banner-text p {
+  color: #83869A;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.banner-img {
+  height: 475px;
+  border-radius: 39px;
+  width: 53%;
+  margin-left: 12px;
+}
+  
+.main-section {
+  margin-top: 65px;
+  grid-area: main-section;
+  display: grid;
+  grid-template: auto / 350px 350px 350px;
+  grid-row-gap: 150px;
+  grid-column-gap: 200px;
+  grid-template-areas:
+  "essentials chef popular"
+  "nutrition plant teens";
+  justify-content: center;
+}
+
+.popular-card:hover {
+  border: solid 1px #FF4C4C;
+}
+
+.card:hover {
+  border: solid 1px #FF4C4C;
+}
+  
+footer {
+  margin-top: 132px;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 25px 0 25px 10px;
+  background-color: #FF4C4C;
+  color: #ffffff; 
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 92px;
+}
+
+}
+
+/* Registration Form CSS */
+
+.form-box {
+  display: flex;
+  margin-left: 3%;
+  width: 40%;
+}
+
+* {box-sizing: border-box}
+
+.container {
+  padding: 10px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-image: linear-gradient(#FF4C4C, #A94E97);
+  border-radius: 15px;
+  color: white;
+  padding: 16px 20px;
+  margin-top: 8px;
+  margin-right: 2%;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  opacity: 0.9;
+}
+
+.resetbtn {
+  background-image: linear-gradient(#FF4C4C, #A94E97);
+  border-radius: 15px;
+  color: white;
+  padding: 16px 20px;
+  margin-top: 8px;
+  margin-left: 2%;
+  border: none;
+  cursor: pointer;
+  width: 45%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+a {
+  color: #FF4C4C;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}

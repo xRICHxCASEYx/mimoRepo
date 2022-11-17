@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sweet Berries Cooking School</title>
+   <link href="SweetBerriesStyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+   <div class="grid-container">
+    
+  
+      <header>
+        <img src="https://i.ibb.co/Sxtkk0L/sbcs-logo.png" alt="sweet berries cooking school logo">
+        <div id="burger-container">
+          <label for="burger" class="burger">&#9776;</label>
+          <input id="burger" type="checkbox">
+          <div class="nav-bar">
+            <a href="/SweetBerries/Sweet Berries.html">Courses</a>
+            <a href="/SweetBerries/Sweet Berries.html">About us</a>
+            <a href="/SweetBerries/SweetBerries_Registration.html" id="get-started">Get Started</a>
+          </div>
+        </div>
+      </header>
+  
+      <main>
+      
+        <div class="banner">
+          <div class="form-box">
+            <form action="action_page.php">
+                 <h1>Registration</h1><br>
+                 <p>Please fill in this form to get started today!</p>
+                 <hr>
+                 <label for="First Name"><b>First Name</b></label>
+                 <input type="text" placeholder="Enter First Name (Required)" name="First Name" id="name" required>
+             
+                 <label for="Last Name"><b>Last Name</b></label>
+                 <input type="text" placeholder="Enter Last Name (Required)" name="Last Name" id="name" required>
+              <div class="row">
+                  <label for="Course Choice"><b>Course Choice (Required)</b></label>
+                <div class="col-75">
+                  <select id="course choice" name="course name">
+                    <option value="Choose">Choose Option Please...</option>
+                    <option value="Cooking Essentials">Cooking Essentials</option>
+                    <option value="Chef Skills">Chef Skills</option>
+                    <option value="Nutrition In Cooking">Nutrition In Cooking</option>
+                    <option value="Plant-Based Cooking">Plant-Based Cooking</option>
+                    <option value="Teen’s Kitchen">Teen’s Kitchen</option>
+                  </select>
+                </div>
+              </div><br>
+                 <label for="email"><b>Email</b></label>
+                 <input type="text" placeholder="Enter Email (Required)" name="email" id="email" required>
+             
+                 <label for="psw"><b>Password</b></label>
+                 <input type="password" placeholder="Enter Password (required, minimum length:6)" name="psw" id="psw" required>
+             
+                 <label for="psw-repeat"><b>Repeat Password</b></label>
+                 <input type="password" placeholder="Repeat Password (required, minimum length:6)" name="psw-repeat" id="psw-repeat" required>
+                 <textarea id="subject" name="subject" placeholder="Notes (Optional).." style="height:200px; width:600px"></textarea>
+                 <hr>
+                 <p>By registering you agree to getting our course information.<a href="#">Terms & Privacy</a>.</p>
+                 <button type="submit" class="registerbtn">Register</button>
+                 <button type="reset" class="resetbtn">Reset Form</button>
+               </div>
+             </form>
+             <img style="width: 800px; height: 700px; margin-left: 8%; border-radius: 30px; margin-top: 2%; border: 2px solid gray; box-shadow: 5px 8px 10px #83869A" src="https://i.ibb.co/pnXCwDm/pexels-kampus-production-8629112.jpg" alt="Chef Cooking" class="#">
+          </div>
+        </div>
+        
+      </main>
+  
+      <footer>
+        <p>Sweet Berries</p>
+      </footer>
+    </div>
+   
+</body>
+</html>
